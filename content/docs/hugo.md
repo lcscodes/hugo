@@ -19,31 +19,23 @@ weight: 1
 
 ## Installation
 
-### Windows
+### Windows 10
 
 1.  install scoop
 
-    Scoop installs the tools you know and love
-
-        command: scoop install curl
-
     Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
 
-        command: Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+        Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 
     or shorter
 
-        command: iwr -useb get.scoop.sh | iex
+        iwr -useb get.scoop.sh | iex
 
     Note: if you get an error you might need to change the execution policy (i.e. enable Powershell) with
 
-    command: Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+        Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 2.  install hugo dengan scoop
-
-         scoop install hugo
-
-    Or install the extended version with:
 
         scoop install hugo-extended
 

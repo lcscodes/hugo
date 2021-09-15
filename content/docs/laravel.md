@@ -9,9 +9,17 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-Laravel
+# Laravel
 
-On Windows
+## On Windows
 
 1. install composer
-2. instal docker desktop https://www.docker.com/products/docker-desktop
+2. buat project
+
+        composer create-project laravel/laravel example-app
+
+        cd example-app
+
+    Develop server
+
+         artisan serve
