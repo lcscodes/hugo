@@ -1,0 +1,4 @@
+baseURL = 'https://lcscodes.github.io/'
+languageCode = 'en-us'
+title = 'LCS CODES'
+theme = 'book'
