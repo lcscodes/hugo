@@ -11,7 +11,7 @@ weight: 1
 
 # Hugo
 
-Command Line
+## Command Line
 
     help : hugo --help
     generate folder public : hugo
