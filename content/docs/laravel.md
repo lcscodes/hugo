@@ -18,8 +18,8 @@ weight: 1
 
         composer create-project laravel/laravel example-app
 
-        cd example-app
-
     Develop server
 
-         artisan serve
+        cd example-app
+
+        artisan serve
