@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LCS CODES</title>
+    <link>https://lcscodes.github.io/</link>
+    <description>Recent content on LCS CODES</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://lcscodes.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://lcscodes.github.io/docs/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcscodes.github.io/docs/about/</guid>
+      <description>Dokumentasi Teknis LCS</description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://lcscodes.github.io/docs/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcscodes.github.io/docs/hugo/</guid>
+      <description>Hugo#Command Line#help : hugo --helpgenerate folder public : hugonew content : hugo new posts/newpost.md , hugo new docs/newdocs.md Installation#Windows 10#  install scoop
+Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&#39;https://get.scoop.sh&#39;) or shorter
+iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change the execution policy (i.</description>
+    </item>
+    
+    <item>
+      <title>Install Git</title>
+      <link>https://lcscodes.github.io/docs/install-git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcscodes.github.io/docs/install-git/</guid>
+      <description>Install Git
+  git init
+  git config user.name &amp;ldquo;namamu&amp;rdquo;
+  git config user.email &amp;ldquo;email@mu&amp;rdquo;
+  open folder di VS CODE -&amp;gt; clone
+  setelah pengeditan lakukan -&amp;gt; commit -&amp;gt; push
+  </description>
+    </item>
+    
+    <item>
+      <title>Laravel</title>
+      <link>https://lcscodes.github.io/docs/laravel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcscodes.github.io/docs/laravel/</guid>
+      <description>Laravel#On Windows#  install composer
+  buat project
+ composer create-project laravel/laravel example-app Develop server
+ cd example-appartisan serve   </description>
+    </item>
+    
+  </channel>
+</rss>
