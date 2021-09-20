@@ -13,16 +13,14 @@ Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&#39;https://get.scoop.sh&#39;) or shorter
 iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change the execution policy (i." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lcscodes.github.io/docs/hugo/" /><meta property="article:section" content="docs" />
-
-
+<meta property="og:url" content="https://lcscodes.github.io/docs/hugo/" />
 
 <title>Hugo | LCS CODES</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.46181bc93375ba932026e753b37c40e6ff8bb16a9ef770c78bcc663e4577b1ba.css" integrity="sha256-RhgbyTN1upMgJudTs3xA5v&#43;LsWqe93DHi8xmPkV3sbo=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.e62c87c0a5f78618c1d9654bac000b57fdba292e359cd3ae3a97d4774328868d.css" integrity="sha256-5iyHwKX3hhjB2WVLrAALV/26KS41nNOuOpfUd0Moho0=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.543b50db93b3a697fdc72e8affc68c4e45f84ef68bf110f4d16074852a59bbee.js" integrity="sha256-VDtQ25Ozppf9xy6K/8aMTkX4TvaL8RD00WB0hSpZu&#43;4=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.347155818f5836f4ce76e87d46bee56d7ad7b2207ac967206c4c67e4eee06477.js" integrity="sha256-NHFVgY9YNvTOduh9Rr7lbXrXsiB6yWcgbExn5O7gZHc=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -140,7 +138,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -260,7 +258,8 @@ new content : hugo new posts/newpost.md , hugo new docs/newdocs.md
 
 
 
-  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
 
 
  

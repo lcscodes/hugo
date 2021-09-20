@@ -51,8 +51,12 @@ iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change
       <guid>https://lcscodes.github.io/docs/laravel/</guid>
       <description>Laravel#On Windows#  install composer
   buat project
- composer create-project laravel/laravel example-app Develop server
- cd example-appartisan serve   </description>
+composer create-project laravel/laravel example-app Develop server
+cd example-appartisan serve   Laravel Modular#Installation On Windows#  install composer
+  buat project
+composer create-project laravel/laravel example-app Develop server
+cd example-appphp artisan serve   install nwidart modules
+composer require nwidart/laravel-modules Publish the package&amp;rsquo;s configuration file</description>
     </item>
     
   </channel>

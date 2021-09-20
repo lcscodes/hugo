@@ -5,24 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Laravel#On Windows#  install composer
   buat project
- composer create-project laravel/laravel example-app Develop server
- cd example-appartisan serve   ">
+composer create-project laravel/laravel example-app Develop server
+cd example-appartisan serve   Laravel Modular#Installation On Windows#  install composer
+  buat project
+composer create-project laravel/laravel example-app Develop server
+cd example-appphp artisan serve   install nwidart modules
+composer require nwidart/laravel-modules Publish the package&rsquo;s configuration file">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Laravel" />
 <meta property="og:description" content="Laravel#On Windows#  install composer
   buat project
- composer create-project laravel/laravel example-app Develop server
- cd example-appartisan serve   " />
+composer create-project laravel/laravel example-app Develop server
+cd example-appartisan serve   Laravel Modular#Installation On Windows#  install composer
+  buat project
+composer create-project laravel/laravel example-app Develop server
+cd example-appphp artisan serve   install nwidart modules
+composer require nwidart/laravel-modules Publish the package&rsquo;s configuration file" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lcscodes.github.io/docs/laravel/" /><meta property="article:section" content="docs" />
-
-
+<meta property="og:url" content="https://lcscodes.github.io/docs/laravel/" />
 
 <title>Laravel | LCS CODES</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.46181bc93375ba932026e753b37c40e6ff8bb16a9ef770c78bcc663e4577b1ba.css" integrity="sha256-RhgbyTN1upMgJudTs3xA5v&#43;LsWqe93DHi8xmPkV3sbo=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.e62c87c0a5f78618c1d9654bac000b57fdba292e359cd3ae3a97d4774328868d.css" integrity="sha256-5iyHwKX3hhjB2WVLrAALV/26KS41nNOuOpfUd0Moho0=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.543b50db93b3a697fdc72e8affc68c4e45f84ef68bf110f4d16074852a59bbee.js" integrity="sha256-VDtQ25Ozppf9xy6K/8aMTkX4TvaL8RD00WB0hSpZu&#43;4=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.347155818f5836f4ce76e87d46bee56d7ad7b2207ac967206c4c67e4eee06477.js" integrity="sha256-NHFVgY9YNvTOduh9Rr7lbXrXsiB6yWcgbExn5O7gZHc=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -140,7 +146,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
 
 
  
@@ -173,6 +179,11 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#on-windows">On Windows</a></li>
   </ul>
+
+  <ul>
+    <li><a href="#installation-on-windows">Installation On Windows</a></li>
+    <li><a href="#basic-usage">Basic Usage</a></li>
+  </ul>
 </nav>
 
 
@@ -198,12 +209,71 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li>
 <p>buat project</p>
-<pre><code> composer create-project laravel/laravel example-app
+<pre><code>composer create-project laravel/laravel example-app
 </code></pre>
 <p>Develop server</p>
-<pre><code> cd example-app
+<pre><code>cd example-app
 
- artisan serve
+artisan serve
+</code></pre>
+</li>
+</ol>
+<h1 id="laravel-modular">
+  Laravel Modular
+  <a class="anchor" href="#laravel-modular">#</a>
+</h1>
+<h2 id="installation-on-windows">
+  Installation On Windows
+  <a class="anchor" href="#installation-on-windows">#</a>
+</h2>
+<ol>
+<li>
+<p>install composer</p>
+</li>
+<li>
+<p>buat project</p>
+<pre><code>composer create-project laravel/laravel example-app
+</code></pre>
+<p>Develop server</p>
+<pre><code>cd example-app
+
+php artisan serve
+</code></pre>
+</li>
+<li>
+<p>install nwidart modules</p>
+<pre><code>composer require nwidart/laravel-modules
+</code></pre>
+<p>Publish the package&rsquo;s configuration file</p>
+<pre><code>php artisan vendor:publish --provider=&quot;Nwidart\Modules\LaravelModulesServiceProvider&quot;
+</code></pre>
+<p>By default the module classes are not loaded automatically. autoload your modules. edit file composer.json at root directory. add script autoload modules</p>
+<pre><code>{
+    &quot;autoload&quot;: {
+        &quot;psr-4&quot;: {
+        &quot;App\\&quot;: &quot;app/&quot;,
+        &quot;Modules\\&quot;: &quot;Modules/&quot;
+        }
+    }
+}
+</code></pre>
+<p>run autoload</p>
+<pre><code>composer dump-autoload
+</code></pre>
+</li>
+</ol>
+<h2 id="basic-usage">
+  Basic Usage
+  <a class="anchor" href="#basic-usage">#</a>
+</h2>
+<ol>
+<li>
+<p>Creating a module</p>
+<p>Huruf awal kapital</p>
+<pre><code>php artisan module:make &lt;module-name&gt;
+</code></pre>
+<p>Beberapa modul sekaligus</p>
+<pre><code>php artisan module:make &lt;module-name&gt; &lt;module-name&gt; &lt;module-name&gt;
 </code></pre>
 </li>
 </ol>
@@ -223,7 +293,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
 
 
  
@@ -249,6 +320,11 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#on-windows">On Windows</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#installation-on-windows">Installation On Windows</a></li>
+    <li><a href="#basic-usage">Basic Usage</a></li>
   </ul>
 </nav>
 
