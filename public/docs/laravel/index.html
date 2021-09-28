@@ -3,23 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Laravel#On Windows#  install composer
+<meta name="description" content="Laravel#Installation On Windows#  install composer
   buat project
 composer create-project laravel/laravel example-app Develop server
-cd example-appartisan serve   Laravel Modular#Installation On Windows#  install composer
-  buat project
-composer create-project laravel/laravel example-app Develop server
-cd example-appphp artisan serve   install nwidart modules
-composer require nwidart/laravel-modules Publish the package&rsquo;s configuration file">
+cd example-appartisan serve   Basic Usage#Set Database#Open file .env di root folder Make Model# php artisan make:model &lt;model-name&gt; -mTambahan -m artinya untuk generate database migration sekaligus Set Migration#Pada folder root/database/migration, lengkapi field untuk databasenya.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Laravel" />
-<meta property="og:description" content="Laravel#On Windows#  install composer
+<meta property="og:description" content="Laravel#Installation On Windows#  install composer
   buat project
 composer create-project laravel/laravel example-app Develop server
-cd example-appartisan serve   Laravel Modular#Installation On Windows#  install composer
-  buat project
-composer create-project laravel/laravel example-app Develop server
-cd example-appphp artisan serve   install nwidart modules
-composer require nwidart/laravel-modules Publish the package&rsquo;s configuration file" />
+cd example-appartisan serve   Basic Usage#Set Database#Open file .env di root folder Make Model# php artisan make:model &lt;model-name&gt; -mTambahan -m artinya untuk generate database migration sekaligus Set Migration#Pada folder root/database/migration, lengkapi field untuk databasenya." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lcscodes.github.io/docs/laravel/" />
 
@@ -28,7 +20,7 @@ composer require nwidart/laravel-modules Publish the package&rsquo;s configurat
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e62c87c0a5f78618c1d9654bac000b57fdba292e359cd3ae3a97d4774328868d.css" integrity="sha256-5iyHwKX3hhjB2WVLrAALV/26KS41nNOuOpfUd0Moho0=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.347155818f5836f4ce76e87d46bee56d7ad7b2207ac967206c4c67e4eee06477.js" integrity="sha256-NHFVgY9YNvTOduh9Rr7lbXrXsiB6yWcgbExn5O7gZHc=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.2f706c4dcabad3cc21af217d24e08500608b62360d67cb5b7556bf68f95040d6.js" integrity="sha256-L3BsTcq608whryF9JOCFAGCLYjYNZ8tbdVa/aPlQQNY=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -177,12 +169,21 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#on-windows">On Windows</a></li>
-  </ul>
-
-  <ul>
     <li><a href="#installation-on-windows">Installation On Windows</a></li>
-    <li><a href="#basic-usage">Basic Usage</a></li>
+    <li><a href="#basic-usage">Basic Usage</a>
+      <ul>
+        <li><a href="#set-database">Set Database</a></li>
+        <li><a href="#make-model">Make Model</a></li>
+        <li><a href="#set-migration">Set Migration</a></li>
+        <li><a href="#migrate-database">migrate database</a></li>
+      </ul>
+    </li>
+    <li><a href="#laravel-modular">Laravel Modular</a>
+      <ul>
+        <li><a href="#installation-on-windows-1">Installation On Windows</a></li>
+        <li><a href="#basic-usage-modular">Basic Usage Modular</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -199,9 +200,9 @@ https://github.com/alex-shpak/hugo-book
   Laravel
   <a class="anchor" href="#laravel">#</a>
 </h1>
-<h2 id="on-windows">
-  On Windows
-  <a class="anchor" href="#on-windows">#</a>
+<h2 id="installation-on-windows">
+  Installation On Windows
+  <a class="anchor" href="#installation-on-windows">#</a>
 </h2>
 <ol>
 <li>
@@ -218,14 +219,63 @@ artisan serve
 </code></pre>
 </li>
 </ol>
-<h1 id="laravel-modular">
+<h2 id="basic-usage">
+  Basic Usage
+  <a class="anchor" href="#basic-usage">#</a>
+</h2>
+<h3 id="set-database">
+  Set Database
+  <a class="anchor" href="#set-database">#</a>
+</h3>
+<pre><code>Open file .env di root folder
+</code></pre>
+<h3 id="make-model">
+  Make Model
+  <a class="anchor" href="#make-model">#</a>
+</h3>
+<pre><code>    php artisan make:model &lt;model-name&gt; -m
+
+Tambahan -m artinya untuk generate database migration sekaligus
+</code></pre>
+<h3 id="set-migration">
+  Set Migration
+  <a class="anchor" href="#set-migration">#</a>
+</h3>
+<pre><code>Pada folder root/database/migration, lengkapi field untuk databasenya. contoh :
+
+    $table-&gt;id();
+    $table-&gt;string('nama',100);
+    $table-&gt;string('alamat',100);
+    $table-&gt;date('tanggalJoin');
+    $table-&gt;timestamps();
+</code></pre>
+<h3 id="migrate-database">
+  migrate database
+  <a class="anchor" href="#migrate-database">#</a>
+</h3>
+<pre><code>    php artisan migrate
+
+rollback migrate database
+
+    php artisan migrate:rollback
+
+Buka model di root/app/Models/&lt;model-name&gt;. isikan data berikut:
+
+    class Customer extends Model
+    {
+        protected $table = &quot;pegawai&quot;;
+        protected $primaryKey = &quot;id&quot;;
+        protected $fillable =['id','nama','alamat','tanggal_lahir'];
+    }
+</code></pre>
+<h2 id="laravel-modular">
   Laravel Modular
   <a class="anchor" href="#laravel-modular">#</a>
-</h1>
-<h2 id="installation-on-windows">
-  Installation On Windows
-  <a class="anchor" href="#installation-on-windows">#</a>
 </h2>
+<h3 id="installation-on-windows-1">
+  Installation On Windows
+  <a class="anchor" href="#installation-on-windows-1">#</a>
+</h3>
 <ol>
 <li>
 <p>install composer</p>
@@ -262,10 +312,10 @@ php artisan serve
 </code></pre>
 </li>
 </ol>
-<h2 id="basic-usage">
-  Basic Usage
-  <a class="anchor" href="#basic-usage">#</a>
-</h2>
+<h3 id="basic-usage-modular">
+  Basic Usage Modular
+  <a class="anchor" href="#basic-usage-modular">#</a>
+</h3>
 <ol>
 <li>
 <p>Creating a module</p>
@@ -319,12 +369,21 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#on-windows">On Windows</a></li>
-  </ul>
-
-  <ul>
     <li><a href="#installation-on-windows">Installation On Windows</a></li>
-    <li><a href="#basic-usage">Basic Usage</a></li>
+    <li><a href="#basic-usage">Basic Usage</a>
+      <ul>
+        <li><a href="#set-database">Set Database</a></li>
+        <li><a href="#make-model">Make Model</a></li>
+        <li><a href="#set-migration">Set Migration</a></li>
+        <li><a href="#migrate-database">migrate database</a></li>
+      </ul>
+    </li>
+    <li><a href="#laravel-modular">Laravel Modular</a>
+      <ul>
+        <li><a href="#installation-on-windows-1">Installation On Windows</a></li>
+        <li><a href="#basic-usage-modular">Basic Usage Modular</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
