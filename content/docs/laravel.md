@@ -11,7 +11,7 @@ weight: 1
 
 # Laravel
 
-## On Windows
+## Installation On Windows
 
 1.  install composer
 2.  buat project
@@ -24,9 +24,48 @@ weight: 1
 
         artisan serve
 
-# Laravel Modular
+## Basic Usage
 
-## Installation On Windows
+### Set Database
+
+    Open file .env di root folder
+
+### Make Model
+
+        php artisan make:model <model-name> -m
+
+    Tambahan -m artinya untuk generate database migration sekaligus
+
+### Set Migration
+
+    Pada folder root/database/migration, lengkapi field untuk databasenya. contoh :
+
+        $table->id();
+        $table->string('nama',100);
+        $table->string('alamat',100);
+        $table->date('tanggalJoin');
+        $table->timestamps();
+
+### migrate database
+
+        php artisan migrate
+
+    rollback migrate database
+
+        php artisan migrate:rollback
+
+    Buka model di root/app/Models/<model-name>. isikan data berikut:
+
+        class Customer extends Model
+        {
+            protected $table = "pegawai";
+            protected $primaryKey = "id";
+            protected $fillable =['id','nama','alamat','tanggal_lahir'];
+        }
+
+## Laravel Modular
+
+### Installation On Windows
 
 1.  install composer
 2.  buat project
@@ -62,7 +101,7 @@ weight: 1
 
         composer dump-autoload
 
-## Basic Usage
+### Basic Usage Modular
 
 1.  Creating a module
 
