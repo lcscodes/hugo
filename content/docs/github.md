@@ -9,13 +9,21 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-Github
+# Github
 
 ## Tentang Github
 
 Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.
 
-## Install Github tes
+## Command Github
+
+### Upload
+
+        git add .
+        git commit -m "isi keterangan update"
+        git push
+
+### Install Github tes
 
 - git init
 - git config user.name "namamu"
@@ -23,9 +31,3 @@ Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu fi
 
 - open folder di VS CODE -> clone
 - setelah pengeditan lakukan -> commit -> push
-
-## Upload Command
-
-        git add .
-        git commit -m "isi keterangan update"
-        git push
