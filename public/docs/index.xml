@@ -16,13 +16,13 @@
     </item>
     
     <item>
-      <title>Git</title>
-      <link>https://lcscodes.github.io/docs/git/</link>
+      <title>Github</title>
+      <link>https://lcscodes.github.io/docs/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lcscodes.github.io/docs/git/</guid>
-      <description>Install Git tes
-  git init
+      <guid>https://lcscodes.github.io/docs/github/</guid>
+      <description>Tentang Github#Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.
+Install Github tes#  git init
   git config user.name &amp;ldquo;namamu&amp;rdquo;
   git config user.email &amp;ldquo;email@mu&amp;rdquo;
   open folder di VS CODE -&amp;gt; clone

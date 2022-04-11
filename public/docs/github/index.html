@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hugo#Command Line#help : hugo --helpgenerate folder public : hugonew content : hugo new posts/newpost.md , hugo new docs/newdocs.md Installation#Windows 10#  install scoop
-Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&#39;https://get.scoop.sh&#39;) or shorter
-iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change the execution policy (i.">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Hugo" />
-<meta property="og:description" content="Hugo#Command Line#help : hugo --helpgenerate folder public : hugonew content : hugo new posts/newpost.md , hugo new docs/newdocs.md Installation#Windows 10#  install scoop
-Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&#39;https://get.scoop.sh&#39;) or shorter
-iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change the execution policy (i." />
+<meta name="description" content="Tentang Github#Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.
+Install Github tes#  git init
+  git config user.name &ldquo;namamu&rdquo;
+  git config user.email &ldquo;email@mu&rdquo;
+  open folder di VS CODE -&gt; clone
+  setelah pengeditan lakukan -&gt; commit -&gt; push
+  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Github" />
+<meta property="og:description" content="Tentang Github#Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.
+Install Github tes#  git init
+  git config user.name &ldquo;namamu&rdquo;
+  git config user.email &ldquo;email@mu&rdquo;
+  open folder di VS CODE -&gt; clone
+  setelah pengeditan lakukan -&gt; commit -&gt; push
+  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lcscodes.github.io/docs/hugo/" />
+<meta property="og:url" content="https://lcscodes.github.io/docs/github/" />
 
-<title>Hugo | LCS CODES</title>
+<title>Github | LCS CODES</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e62c87c0a5f78618c1d9654bac000b57fdba292e359cd3ae3a97d4774328868d.css" integrity="sha256-5iyHwKX3hhjB2WVLrAALV/26KS41nNOuOpfUd0Moho0=" crossorigin="anonymous">
@@ -85,7 +91,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://lcscodes.github.io/docs/github/" class="">Github</a>
+    <a href="https://lcscodes.github.io/docs/github/" class=" active">Github</a>
   
 
         </li>
@@ -98,7 +104,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://lcscodes.github.io/docs/hugo/" class=" active">Hugo</a>
+    <a href="https://lcscodes.github.io/docs/hugo/" class="">Hugo</a>
   
 
         </li>
@@ -153,7 +159,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Hugo</strong>
+  <strong>Github</strong>
 
   <label for="toc-control">
     
@@ -167,16 +173,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#command-line">Command Line</a></li>
-    <li><a href="#installation">Installation</a>
-      <ul>
-        <li><a href="#windows-10">Windows 10</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 
 
 
@@ -187,61 +184,32 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="hugo">
-  Hugo
-  <a class="anchor" href="#hugo">#</a>
+  <article class="markdown"><h1 id="tentang-github">
+  Tentang Github
+  <a class="anchor" href="#tentang-github">#</a>
 </h1>
-<h2 id="command-line">
-  Command Line
-  <a class="anchor" href="#command-line">#</a>
-</h2>
-<pre><code>help : hugo --help
-generate folder public : hugo
-new content : hugo new posts/newpost.md , hugo new docs/newdocs.md
-</code></pre>
-<h2 id="installation">
-  Installation
-  <a class="anchor" href="#installation">#</a>
-</h2>
-<h3 id="windows-10">
-  Windows 10
-  <a class="anchor" href="#windows-10">#</a>
-</h3>
-<ol>
+<p>Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.</p>
+<h1 id="install-github-tes">
+  Install Github tes
+  <a class="anchor" href="#install-github-tes">#</a>
+</h1>
+<ul>
 <li>
-<p>install scoop</p>
-<p>Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:</p>
-<pre><code>Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-</code></pre>
-<p>or shorter</p>
-<pre><code>iwr -useb get.scoop.sh | iex
-</code></pre>
-<p>Note: if you get an error you might need to change the execution policy (i.e. enable Powershell) with</p>
-<pre><code>Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-</code></pre>
+<p>git init</p>
 </li>
 <li>
-<p>install hugo dengan scoop</p>
-<pre><code>scoop install hugo-extended
-</code></pre>
-<p>install theme (cari di web hugo)</p>
-<pre><code>git submodule add https://github.com/alex-shpak/hugo-book themes/book
-</code></pre>
-<p>Then run hugo (or set theme = &ldquo;book&rdquo;/theme: book in configuration file)</p>
-<pre><code>hugo server --minify --theme book
-</code></pre>
+<p>git config user.name &ldquo;namamu&rdquo;</p>
 </li>
 <li>
-<p>jalankan web dengan perintah</p>
-<pre><code>hugo server
-</code></pre>
-<p>copy link server ke browser.</p>
-<p>Untuk generate folder public</p>
-<pre><code>command: hugo
-</code></pre>
-<p>folder public akan muncul, website statis siap di upload.</p>
+<p>git config user.email &ldquo;email@mu&rdquo;</p>
 </li>
-</ol>
+<li>
+<p>open folder di VS CODE -&gt; clone</p>
+</li>
+<li>
+<p>setelah pengeditan lakukan -&gt; commit -&gt; push</p>
+</li>
+</ul>
 </article>
  
       
@@ -282,16 +250,7 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#command-line">Command Line</a></li>
-    <li><a href="#installation">Installation</a>
-      <ul>
-        <li><a href="#windows-10">Windows 10</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 
 
  
