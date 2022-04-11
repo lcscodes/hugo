@@ -24,4 +24,8 @@ Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu fi
 - open folder di VS CODE -> clone
 - setelah pengeditan lakukan -> commit -> push
 
-##
+## Upload Command
+
+        git add .
+        git commit -m "isi keterangan update"
+        git push
