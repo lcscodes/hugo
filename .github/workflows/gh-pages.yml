@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 name: github pages
-=======
-name: Pages
->>>>>>> aec02e7e3f3e2448b99ff22183d093d3aafef72a
 
 on:
   push:
     branches:
-<<<<<<< HEAD
       - main # Set a branch to deploy
   pull_request:
 
@@ -32,32 +27,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
-=======
-      - main  # default branch
-
-jobs:
-  pages:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      - name: Cache NPM dependencies
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
->>>>>>> aec02e7e3f3e2448b99ff22183d093d3aafef72a
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
