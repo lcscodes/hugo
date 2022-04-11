@@ -12,7 +12,22 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lcscodes.github.io/docs/about/</guid>
-      <description>Dokumentasi Teknis LCS</description>
+      <description>Dokumentasi Teknis LCS tes vcccc</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://lcscodes.github.io/docs/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcscodes.github.io/docs/git/</guid>
+      <description>Install Git tes
+  git init
+  git config user.name &amp;ldquo;namamu&amp;rdquo;
+  git config user.email &amp;ldquo;email@mu&amp;rdquo;
+  open folder di VS CODE -&amp;gt; clone
+  setelah pengeditan lakukan -&amp;gt; commit -&amp;gt; push
+  </description>
     </item>
     
     <item>
@@ -25,21 +40,6 @@
 Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&#39;https://get.scoop.sh&#39;) or shorter
 iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change the execution policy (i.</description>
-    </item>
-    
-    <item>
-      <title>Install Git</title>
-      <link>https://lcscodes.github.io/docs/install-git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lcscodes.github.io/docs/install-git/</guid>
-      <description>Install Git
-  git init
-  git config user.name &amp;ldquo;namamu&amp;rdquo;
-  git config user.email &amp;ldquo;email@mu&amp;rdquo;
-  open folder di VS CODE -&amp;gt; clone
-  setelah pengeditan lakukan -&amp;gt; commit -&amp;gt; push
-  </description>
     </item>
     
     <item>

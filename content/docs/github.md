@@ -1,5 +1,5 @@
 ---
-title: "Install Git"
+title: "Github"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -9,7 +9,11 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-Install Git
+# Tentang Github
+
+Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.
+
+# Install Github tes
 
 - git init
 - git config user.name "namamu"
