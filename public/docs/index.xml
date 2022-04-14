@@ -34,10 +34,8 @@ Command Github#Upload# git add .git commit -m &amp;quot;isi keterangan up
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lcscodes.github.io/docs/go/</guid>
-      <description>Go#Command Line#help : hugo --helpgenerate folder public : hugonew content : hugo new posts/newpost.md , hugo new docs/newdocs.md Installation#Windows 10#  install scoop
-Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&#39;https://get.scoop.sh&#39;) or shorter
-iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change the execution policy (i.</description>
+      <description>Go#Command Line#Init Modul#Init modul adalah command pertama kali yang harus dijalankan setelah membuat folder project.
+ go mod main.go Run Server# go run main.go Code#Router main.go# package mainimport (&amp;quot;fmt&amp;quot;&amp;quot;net/http&amp;quot;)func main() {http.HandleFunc(&amp;quot;/&amp;quot;, func(w http.ResponseWriter, r *http.Request) {fmt.Fprintln(w, &amp;quot;halo!&amp;quot;)})fmt.Println(&amp;quot;starting web server at http://localhost:10001/&amp;quot;)http.</description>
     </item>
     
     <item>

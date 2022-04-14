@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Go#Command Line#help : hugo --helpgenerate folder public : hugonew content : hugo new posts/newpost.md , hugo new docs/newdocs.md Installation#Windows 10#  install scoop
-Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&#39;https://get.scoop.sh&#39;) or shorter
-iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change the execution policy (i.">
+<meta name="description" content="Go#Command Line#Init Modul#Init modul adalah command pertama kali yang harus dijalankan setelah membuat folder project.
+ go mod main.go Run Server# go run main.go Code#Router main.go# package mainimport (&quot;fmt&quot;&quot;net/http&quot;)func main() {http.HandleFunc(&quot;/&quot;, func(w http.ResponseWriter, r *http.Request) {fmt.Fprintln(w, &quot;halo!&quot;)})fmt.Println(&quot;starting web server at http://localhost:10001/&quot;)http.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Go" />
-<meta property="og:description" content="Go#Command Line#help : hugo --helpgenerate folder public : hugonew content : hugo new posts/newpost.md , hugo new docs/newdocs.md Installation#Windows 10#  install scoop
-Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&#39;https://get.scoop.sh&#39;) or shorter
-iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change the execution policy (i." />
+<meta property="og:description" content="Go#Command Line#Init Modul#Init modul adalah command pertama kali yang harus dijalankan setelah membuat folder project.
+ go mod main.go Run Server# go run main.go Code#Router main.go# package mainimport (&quot;fmt&quot;&quot;net/http&quot;)func main() {http.HandleFunc(&quot;/&quot;, func(w http.ResponseWriter, r *http.Request) {fmt.Fprintln(w, &quot;halo!&quot;)})fmt.Println(&quot;starting web server at http://localhost:10001/&quot;)http." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lcscodes.github.io/docs/go/" />
 
@@ -20,7 +16,7 @@ iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e62c87c0a5f78618c1d9654bac000b57fdba292e359cd3ae3a97d4774328868d.css" integrity="sha256-5iyHwKX3hhjB2WVLrAALV/26KS41nNOuOpfUd0Moho0=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.d59b26b6543a29be34302be7a67896554e7da533ff7e14da141b572bb0527d0b.js" integrity="sha256-1ZsmtlQ6Kb40MCvnpniWVU59pTP/fhTaFBtXK7BSfQs=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.72be7a6970f9db7194f137d36fafacbcde6bcfa7f045467aeaaf567ec44cc883.js" integrity="sha256-cr56aXD523GU8TfTb6&#43;svN5rz6fwRUZ66q9WfsRMyIM=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -182,10 +178,15 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#command-line">Command Line</a></li>
-    <li><a href="#installation">Installation</a>
+    <li><a href="#command-line">Command Line</a>
       <ul>
-        <li><a href="#windows-10">Windows 10</a></li>
+        <li><a href="#init-modul">Init Modul</a></li>
+        <li><a href="#run-server">Run Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#code">Code</a>
+      <ul>
+        <li><a href="#router-maingo">Router main.go</a></li>
       </ul>
     </li>
   </ul>
@@ -208,53 +209,43 @@ https://github.com/alex-shpak/hugo-book
   Command Line
   <a class="anchor" href="#command-line">#</a>
 </h2>
-<pre><code>help : hugo --help
-generate folder public : hugo
-new content : hugo new posts/newpost.md , hugo new docs/newdocs.md
-</code></pre>
-<h2 id="installation">
-  Installation
-  <a class="anchor" href="#installation">#</a>
-</h2>
-<h3 id="windows-10">
-  Windows 10
-  <a class="anchor" href="#windows-10">#</a>
+<h3 id="init-modul">
+  Init Modul
+  <a class="anchor" href="#init-modul">#</a>
 </h3>
-<ol>
-<li>
-<p>install scoop</p>
-<p>Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:</p>
-<pre><code>Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+<p>Init modul adalah command pertama kali yang harus dijalankan setelah membuat folder project.</p>
+<pre><code>    go mod main.go
 </code></pre>
-<p>or shorter</p>
-<pre><code>iwr -useb get.scoop.sh | iex
+<h3 id="run-server">
+  Run Server
+  <a class="anchor" href="#run-server">#</a>
+</h3>
+<pre><code>    go run main.go
 </code></pre>
-<p>Note: if you get an error you might need to change the execution policy (i.e. enable Powershell) with</p>
-<pre><code>Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+<h2 id="code">
+  Code
+  <a class="anchor" href="#code">#</a>
+</h2>
+<h3 id="router-maingo">
+  Router main.go
+  <a class="anchor" href="#router-maingo">#</a>
+</h3>
+<pre><code>    package main
+
+    import (
+        &quot;fmt&quot;
+        &quot;net/http&quot;
+    )
+
+    func main() {
+        http.HandleFunc(&quot;/&quot;, func(w http.ResponseWriter, r *http.Request) {
+            fmt.Fprintln(w, &quot;halo!&quot;)
+        })
+
+        fmt.Println(&quot;starting web server at http://localhost:10001/&quot;)
+        http.ListenAndServe(&quot;:10001&quot;, nil)
+    }
 </code></pre>
-</li>
-<li>
-<p>install hugo dengan scoop</p>
-<pre><code>scoop install hugo-extended
-</code></pre>
-<p>install theme (cari di web hugo)</p>
-<pre><code>git submodule add https://github.com/alex-shpak/hugo-book themes/book
-</code></pre>
-<p>Then run hugo (or set theme = &ldquo;book&rdquo;/theme: book in configuration file)</p>
-<pre><code>hugo server --minify --theme book
-</code></pre>
-</li>
-<li>
-<p>jalankan web dengan perintah</p>
-<pre><code>hugo server
-</code></pre>
-<p>copy link server ke browser.</p>
-<p>Untuk generate folder public</p>
-<pre><code>command: hugo
-</code></pre>
-<p>folder public akan muncul, website statis siap di upload.</p>
-</li>
-</ol>
 </article>
  
       
@@ -297,10 +288,15 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#command-line">Command Line</a></li>
-    <li><a href="#installation">Installation</a>
+    <li><a href="#command-line">Command Line</a>
       <ul>
-        <li><a href="#windows-10">Windows 10</a></li>
+        <li><a href="#init-modul">Init Modul</a></li>
+        <li><a href="#run-server">Run Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#code">Code</a>
+      <ul>
+        <li><a href="#router-maingo">Router main.go</a></li>
       </ul>
     </li>
   </ul>

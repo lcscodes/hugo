@@ -13,48 +13,32 @@ weight: 1
 
 ## Command Line
 
-    help : hugo --help
-    generate folder public : hugo
-    new content : hugo new posts/newpost.md , hugo new docs/newdocs.md
+### Init Modul
 
-## Installation
+Init modul adalah command pertama kali yang harus dijalankan setelah membuat folder project.
 
-### Windows 10
+        go mod [nama project]
 
-1.  install scoop
+### Run Server
 
-    Make sure PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later) are installed. Then run:
+        go run main.go
 
-        Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+## Code
 
-    or shorter
+### Router main.go
 
-        iwr -useb get.scoop.sh | iex
+        package main
 
-    Note: if you get an error you might need to change the execution policy (i.e. enable Powershell) with
+        import (
+            "fmt"
+            "net/http"
+        )
 
-        Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+        func main() {
+        	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+            	fmt.Fprintln(w, "halo!")
+            })
 
-2.  install hugo dengan scoop
-
-        scoop install hugo-extended
-
-    install theme (cari di web hugo)
-
-        git submodule add https://github.com/alex-shpak/hugo-book themes/book
-
-    Then run hugo (or set theme = "book"/theme: book in configuration file)
-
-        hugo server --minify --theme book
-
-3.  jalankan web dengan perintah
-
-        hugo server
-
-    copy link server ke browser.
-
-    Untuk generate folder public
-
-        command: hugo
-
-    folder public akan muncul, website statis siap di upload.
+            fmt.Println("starting web server at http://localhost:10001/")
+            http.ListenAndServe(":10001", nil)
+        }
