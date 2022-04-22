@@ -9,11 +9,21 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-# Github
+# Git
 
-## Tentang Github
+## Pengantar Git
+
+### Git
+
+Git merupakan software berbasis Version Control System (VCS) yang bertugas untuk mencatat perubahan seluruh file atau repository suatu project.
+
+### GitHub
 
 Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.
+
+### GitBash
+
+Git Bash merupakan aplikasi Windows untuk terminal Git command line. Kemudahannya adalah, kita bisa langsung klik kanan pada explorer untuk mengakses terminal di folder tersebut.
 
 ## Command Github
 

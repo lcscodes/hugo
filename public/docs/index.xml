@@ -12,20 +12,18 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lcscodes.github.io/docs/about/</guid>
-      <description>Dokumentasi Teknis LCS tes vcccc</description>
+      <description>Dokumentasi Teknis LCS</description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>https://lcscodes.github.io/docs/github/</link>
+      <link>https://lcscodes.github.io/docs/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lcscodes.github.io/docs/github/</guid>
-      <description>Github#Tentang Github#Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.
-Command Github#Upload# git add .git commit -m &amp;quot;isi keterangan update&amp;quot;git push Install Github tes#  git init
-  git config user.name &amp;ldquo;namamu&amp;rdquo;
-  git config user.email &amp;ldquo;email@mu&amp;rdquo;
-  open folder di VS CODE -&amp;gt; clone</description>
+      <guid>https://lcscodes.github.io/docs/git/</guid>
+      <description>Git#Pengantar Git#Git#Git merupakan software berbasis Version Control System (VCS) yang bertugas untuk mencatat perubahan seluruh file atau repository suatu project.
+GitHub#Github adalah aplikasi version control (perekam jejak, setiap meng-edit suatu file) berbasis cloud.
+GitBash#Git Bash merupakan aplikasi Windows untuk terminal Git command line. Kemudahannya adalah, kita bisa langsung klik kanan pada explorer untuk mengakses terminal di folder tersebut.</description>
     </item>
     
     <item>
@@ -35,7 +33,7 @@ Command Github#Upload# git add .git commit -m &amp;quot;isi keterangan up
       
       <guid>https://lcscodes.github.io/docs/go/</guid>
       <description>Go#Command Line#Init Modul#Init modul adalah command pertama kali yang harus dijalankan setelah membuat folder project.
- go mod main.go Run Server# go run main.go Code#Router main.go# package mainimport (&amp;quot;fmt&amp;quot;&amp;quot;net/http&amp;quot;)func main() {http.HandleFunc(&amp;quot;/&amp;quot;, func(w http.ResponseWriter, r *http.Request) {fmt.Fprintln(w, &amp;quot;halo!&amp;quot;)})fmt.Println(&amp;quot;starting web server at http://localhost:10001/&amp;quot;)http.</description>
+ go mod [nama project] Run Server# go run main.go Code#Router main.go# package mainimport (&amp;quot;fmt&amp;quot;&amp;quot;net/http&amp;quot;)func main() {http.HandleFunc(&amp;quot;/&amp;quot;, func(w http.ResponseWriter, r *http.Request) {fmt.Fprintln(w, &amp;quot;halo!&amp;quot;)})fmt.Println(&amp;quot;starting web server at http://localhost:10001/&amp;quot;)http.</description>
     </item>
     
     <item>
@@ -60,6 +58,17 @@ iwr -useb get.scoop.sh | iex Note: if you get an error you might need to change
   buat project
 composer create-project laravel/laravel example-app Develop server
 cd example-appartisan serve   Basic Usage#Set Database#Open file .env di root folder Make Model# php artisan make:model &amp;lt;model-name&amp;gt; -mTambahan -m artinya untuk generate database migration sekaligus Set Migration#Pada folder root/database/migration, lengkapi field untuk databasenya.</description>
+    </item>
+    
+    <item>
+      <title>Node.JS</title>
+      <link>https://lcscodes.github.io/docs/nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lcscodes.github.io/docs/nodejs/</guid>
+      <description>Node.JS#Pengantar Node.JS#Node.JS#Node.js adalah runtime environment untuk JavaScript. Sama halnya dengan .NET ataupun JRE pada Java.
+Dulu, javascript hanya bisa dieksekusi di browser dan hanya untuk frontend saja. Sekarang dengan Node.js, kita dapat menjalankan kode JavaScript di mana pun (frontend maupun backend), tidak hanya terbatas pada lingkungan browser saja.
+NPM#NPM adalah Node Package Manager. Digunakan untuk berbagi tool, menginstal modul, dan mengelola dependensi.</description>
     </item>
     
   </channel>

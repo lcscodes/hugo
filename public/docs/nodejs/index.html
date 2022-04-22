@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Node.JS#Pengantar Node.JS#Node.JS#Node.js adalah runtime environment untuk JavaScript. Sama halnya dengan .NET ataupun JRE pada Java.
+Dulu, javascript hanya bisa dieksekusi di browser dan hanya untuk frontend saja. Sekarang dengan Node.js, kita dapat menjalankan kode JavaScript di mana pun (frontend maupun backend), tidak hanya terbatas pada lingkungan browser saja.
+NPM#NPM adalah Node Package Manager. Digunakan untuk berbagi tool, menginstal modul, dan mengelola dependensi.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Node.JS" />
+<meta property="og:description" content="Node.JS#Pengantar Node.JS#Node.JS#Node.js adalah runtime environment untuk JavaScript. Sama halnya dengan .NET ataupun JRE pada Java.
+Dulu, javascript hanya bisa dieksekusi di browser dan hanya untuk frontend saja. Sekarang dengan Node.js, kita dapat menjalankan kode JavaScript di mana pun (frontend maupun backend), tidak hanya terbatas pada lingkungan browser saja.
+NPM#NPM adalah Node Package Manager. Digunakan untuk berbagi tool, menginstal modul, dan mengelola dependensi." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lcscodes.github.io/docs/nodejs/" />
+
+<title>Node.JS | LCS CODES</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e62c87c0a5f78618c1d9654bac000b57fdba292e359cd3ae3a97d4774328868d.css" integrity="sha256-5iyHwKX3hhjB2WVLrAALV/26KS41nNOuOpfUd0Moho0=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.68b7b269bbf297e29f38bbdcae319eb51c2f85681d37122358752af180f40b1e.js" integrity="sha256-aLeyabvyl&#43;KfOLvcrjGetRwvhWgdNxIjWHUq8YD0Cx4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>LCS CODES</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://lcscodes.github.io/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://lcscodes.github.io/docs/git/" class="">Github</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://lcscodes.github.io/docs/go/" class="">Go</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://lcscodes.github.io/docs/hugo/" class="">Hugo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://lcscodes.github.io/docs/laravel/" class="">Laravel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://lcscodes.github.io/docs/nodejs/" class=" active">Node.JS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Node.JS</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pengantar-nodejs">Pengantar Node.JS</a>
+      <ul>
+        <li><a href="#nodejs-1">Node.JS</a></li>
+        <li><a href="#npm">NPM</a></li>
+        <li><a href="#express">Express</a></li>
+      </ul>
+    </li>
+    <li><a href="#perintah-command-line">Perintah Command Line</a>
+      <ul>
+        <li><a href="#install-nodejs">Install Node.JS</a></li>
+        <li><a href="#install-npm">Install NPM</a></li>
+        <li><a href="#initiate-nodejs-file-run-server-otomatis">Initiate node.js file (Run Server Otomatis)</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-server-nodejs">Membuat Server Node.JS</a></li>
+    <li><a href="#nodejs-mysql">Node.JS MySql</a></li>
+    <li><a href="#crud-nodejs-express-bootstrap--mysql">CRUD Node.JS, Express, Bootstrap &amp; MySQL</a></li>
+    <li><a href="#question--answer">Question &amp; Answer</a>
+      <ul>
+        <li><a href="#npm-err-npm--depends-node-gyp">NPM ERR: npm : Depends: node-gyp</a></li>
+      </ul>
+    </li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="nodejs">
+  Node.JS
+  <a class="anchor" href="#nodejs">#</a>
+</h1>
+<h2 id="pengantar-nodejs">
+  Pengantar Node.JS
+  <a class="anchor" href="#pengantar-nodejs">#</a>
+</h2>
+<h3 id="nodejs-1">
+  Node.JS
+  <a class="anchor" href="#nodejs-1">#</a>
+</h3>
+<p>Node.js adalah runtime environment untuk JavaScript. Sama halnya dengan .NET ataupun JRE pada Java.</p>
+<p>Dulu, javascript hanya bisa dieksekusi di browser dan hanya untuk frontend saja. Sekarang dengan Node.js, kita dapat menjalankan kode JavaScript di mana pun (frontend maupun backend), tidak hanya terbatas pada lingkungan browser saja.</p>
+<h3 id="npm">
+  NPM
+  <a class="anchor" href="#npm">#</a>
+</h3>
+<p>NPM adalah Node Package Manager. Digunakan untuk berbagi tool, menginstal modul, dan mengelola dependensi.</p>
+<h3 id="express">
+  Express
+  <a class="anchor" href="#express">#</a>
+</h3>
+<p>Express adalah framework aplikasi web Node.js. Bagus untuk membuat API karena minimal, cepat dan mudah.</p>
+<h2 id="perintah-command-line">
+  Perintah Command Line
+  <a class="anchor" href="#perintah-command-line">#</a>
+</h2>
+<h3 id="install-nodejs">
+  Install Node.JS
+  <a class="anchor" href="#install-nodejs">#</a>
+</h3>
+<p>Ubuntu</p>
+<pre><code>sudo apt install nodejs
+</code></pre>
+<p>Cek Versi</p>
+<pre><code>npm -v
+</code></pre>
+<p>Membuat package.json</p>
+<pre><code>npm init
+</code></pre>
+<h3 id="install-npm">
+  Install NPM
+  <a class="anchor" href="#install-npm">#</a>
+</h3>
+<p>Ubuntu</p>
+<pre><code>sudo apt install npm
+</code></pre>
+<p>Cek Versi</p>
+<pre><code>node -v
+</code></pre>
+<h3 id="initiate-nodejs-file-run-server-otomatis">
+  Initiate node.js file (Run Server Otomatis)
+  <a class="anchor" href="#initiate-nodejs-file-run-server-otomatis">#</a>
+</h3>
+<p>File yang dibuat harus di-inisiasi dulu oleh node.js sebelum action lain dijalankan.</p>
+<pre><code>node app.js
+</code></pre>
+<h2 id="membuat-server-nodejs">
+  Membuat Server Node.JS
+  <a class="anchor" href="#membuat-server-nodejs">#</a>
+</h2>
+<pre><code>const http = require('http');
+
+const hostname = 'sipkd.madiunkota.go.id';
+const port = 3000;
+
+const server = http.createServer((req, res) =&gt; {
+    res.writeHead(200,{
+        &quot;Content-Type&quot; : &quot;text/html&quot;
+    });
+    res.end('Hello World');
+    });
+
+server.listen(port, hostname, () =&gt; {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
+</code></pre>
+<p>Jalankan di terminal dengan perintah &lsquo;node app.js&rsquo;</p>
+<h2 id="nodejs-mysql">
+  Node.JS MySql
+  <a class="anchor" href="#nodejs-mysql">#</a>
+</h2>
+<pre><code>npm install mysql
+</code></pre>
+<p>Membuat koneksi :</p>
+<p>buatlah file koneksi.js</p>
+<pre><code>var mysql = require('mysql');
+
+var con = mysql.createConnection({
+host: &quot;localhost&quot;,
+user: &quot;yourusername&quot;,
+password: &quot;yourpassword&quot;
+});
+
+con.connect(function(err) {
+if (err) throw err;
+console.log(&quot;Connected!&quot;);
+});
+</code></pre>
+<p>Jalankan di terminal dengan perintah &lsquo;node koneksi.js&rsquo;</p>
+<h2 id="crud-nodejs-express-bootstrap--mysql">
+  CRUD Node.JS, Express, Bootstrap &amp; MySQL
+  <a class="anchor" href="#crud-nodejs-express-bootstrap--mysql">#</a>
+</h2>
+<ol>
+<li>
+<p>Siapkan (download) bootstrap &amp; jquery</p>
+<p><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+<p><a href="https://jquery.com/">https://jquery.com/</a></p>
+</li>
+<li>
+<p>Siapkan database dan table mysql</p>
+<p>nama db: example
+nama table: user
+field: id, username, password</p>
+</li>
+<li>
+<p>Buat folder project</p>
+<p>nama folder: crud</p>
+</li>
+<li>
+<p>Buat package.json</p>
+<p>jalankan perintah command line berikut di dalam folder project.</p>
+<pre><code>npm init
+</code></pre>
+<p>Perintah diatas akan membuat sebuah file bernama package.json secara otomatis pada project Anda.</p>
+</li>
+<li>
+<p>Install dependencies</p>
+<p>Dependencies disini adalah fitur pendukung (seperti: framework, driver, middleware, template) yang harus disediakan untuk menyempurnakan alur aplikasi. Dependencies yang dibutuhkan adalah :</p>
+<ol>
+<li>Express (node.js web framework)</li>
+<li>MySQL (driver mysql untuk node.js)</li>
+<li>Body-parser (middleware untuk menjalankan post body request)</li>
+<li>Handlebars (template engine (seperti blade di laravel) )</li>
+</ol>
+<p>Instal dependencies yang dibutuhkan dengan mengetik perintah berikut.</p>
+<pre><code>npm install --save express mysql body-parser hbs
+</code></pre>
+<p>Perintah diatas akan menginstall semua dependencies yang kita butuhkan yaitu: express, mysql, body-parser, dan handlebars. Kita bisa pantau dependencies yang terinstall di dalam file package.json.</p>
+</li>
+<li>
+<p>Struktur Project</p>
+<p>Buat folder public dan views di dalam project folder crud.</p>
+<p>Buat folder css dan js di dalam folder public.</p>
+<p>Copy file-file bootstrap.css yang telah di download sebelumnya kedalam folder public/css/.</p>
+<p>Copy file-file bootstrap.js dan jquery pada folder public/js/.</p>
+</li>
+<li>
+<p>Index.js</p>
+<p>Buat file dengan nama index.js di dalam folder project crud. Ketikkan kode berikut.</p>
+<pre><code>//use path module
+const path = require('path');
+//use express module
+const express = require('express');
+//use hbs view engine
+const hbs = require('hbs');
+//use bodyParser middleware
+const bodyParser = require('body-parser');
+//use mysql database
+const mysql = require('mysql');
+const app = express();
+
+//konfigurasi koneksi
+const conn = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'example'
+});
+
+//connect ke database
+conn.connect((err) =&gt; {
+    if (err) throw err;
+    console.log('Mysql Connected...');
+});
+
+//set views file
+app.set('views', path.join(__dirname, 'views'));
+//set view engine
+app.set('view engine', 'hbs');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+//set folder public sebagai static folder untuk static file
+app.use('/assets', express.static(__dirname + '/public'));
+
+//route untuk homepage
+app.get('/', (req, res) =&gt; {
+    let sql = &quot;SELECT * FROM user&quot;;
+    let query = conn.query(sql, (err, results) =&gt; {
+        if (err) throw err;
+        res.render('user_view', {
+            results: results
+        });
+    });
+});
+
+//route untuk insert data
+app.post('/save', (req, res) =&gt; {
+    let data = { username: req.body.username, password: req.body.password };
+    let sql = &quot;INSERT INTO user SET ?&quot;;
+    let query = conn.query(sql, data, (err, results) =&gt; {
+        if (err) throw err;
+        res.redirect('/');
+    });
+});
+
+//route untuk update data
+app.post('/update', (req, res) =&gt; {
+    let sql = &quot;UPDATE user SET username='&quot; + req.body.username + &quot;', password='&quot; + req.body.password + &quot;' WHERE id=&quot; + req.body.id;
+    let query = conn.query(sql, (err, results) =&gt; {
+        if (err) throw err;
+        res.redirect('/');
+    });
+});
+
+//route untuk delete data
+app.post('/delete', (req, res) =&gt; {
+    let sql = &quot;DELETE FROM user WHERE id=&quot; + req.body.id + &quot;&quot;;
+    let query = conn.query(sql, (err, results) =&gt; {
+        if (err) throw err;
+        res.redirect('/');
+    });
+});
+
+//server listening
+app.listen(8000, () =&gt; {
+    console.log('Server is running at port 8000');
+});
+</code></pre>
+</li>
+<li>
+<p>View</p>
+<p>Buat file dengan nama user_view.hbs didalam folder views. Lalu ketikkan kode berikut.</p>
+<pre><code>&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;CRUD Node.js and Mysql&lt;/title&gt;
+    &lt;link href=&quot;/assets/css/bootstrap.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h2&gt;User List&lt;/h2&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#myModalAdd&quot;&gt;
+            Add New
+        &lt;/button&gt;
+        &lt;table class=&quot;table table-striped&quot; id=&quot;mytable&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;ID&lt;/th&gt;
+                    &lt;th&gt;Username&lt;/th&gt;
+                    &lt;th&gt;Password&lt;/th&gt;
+                    &lt;th&gt;Action&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                {{#each results}}
+                &lt;tr&gt;
+                    &lt;td&gt;{{ id }}&lt;/td&gt;
+                    &lt;td&gt;{{ username }}&lt;/td&gt;
+                    &lt;td&gt;{{ password }}&lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;a href=&quot;javascript:void(0);&quot; class=&quot;btn btn-sm btn-info edit&quot; data-id=&quot;{{ id }}&quot;
+                            data-username=&quot;{{ username }}&quot; data-password=&quot;{{ password }}&quot;&gt;Edit&lt;/a&gt;
+                        &lt;a href=&quot;javascript:void(0);&quot; class=&quot;btn btn-sm btn-danger delete&quot;
+                            data-id=&quot;{{ id }}&quot;&gt;Delete&lt;/a&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                {{/each}}
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Modal Add Produk--&gt;
+    &lt;div class=&quot;modal fade&quot; id=&quot;myModalAdd&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot;
+        aria-hidden=&quot;true&quot;&gt;
+        &lt;form action=&quot;/save&quot; method=&quot;post&quot;&gt;
+            &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;
+                &lt;div class=&quot;modal-content&quot;&gt;
+                    &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h5 class=&quot;modal-title&quot; id=&quot;exampleModalLabel&quot;&gt;Add New User&lt;/h5&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;input type=&quot;text&quot; name=&quot;username&quot; class=&quot;form-control&quot; placeholder=&quot;Nama User&quot;
+                                required&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;input type=&quot;text&quot; name=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot; required&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-footer&quot;&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Save&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Modal Update Produk--&gt;
+    &lt;form action=&quot;/update&quot; method=&quot;post&quot;&gt;
+        &lt;div class=&quot;modal fade&quot; id=&quot;EditModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot;
+            aria-hidden=&quot;true&quot;&gt;
+            &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;
+                &lt;div class=&quot;modal-content&quot;&gt;
+                    &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h5 class=&quot;modal-title&quot; id=&quot;exampleModalLabel&quot;&gt;Edit Product&lt;/h5&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;input type=&quot;text&quot; name=&quot;username&quot; class=&quot;form-control username&quot; placeholder=&quot;Nama User&quot;
+                                required&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;input type=&quot;text&quot; name=&quot;password&quot; class=&quot;form-control password&quot; placeholder=&quot;Password&quot;
+                                required&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-footer&quot;&gt;
+                        &lt;input type=&quot;hidden&quot; name=&quot;id&quot; class=&quot;id&quot;&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Update&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;!-- Modal Delete Produk--&gt;
+    &lt;form id=&quot;add-row-form&quot; action=&quot;/delete&quot; method=&quot;post&quot;&gt;
+        &lt;div class=&quot;modal fade&quot; id=&quot;DeleteModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot;
+            aria-hidden=&quot;true&quot;&gt;
+            &lt;div class=&quot;modal-dialog&quot;&gt;
+                &lt;div class=&quot;modal-content&quot;&gt;
+                    &lt;div class=&quot;modal-header&quot;&gt;
+                        &lt;h5 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Delete User&lt;/h5&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-body&quot;&gt;
+                        &lt;strong&gt;Anda yakin mau menghapus data ini?&lt;/strong&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-footer&quot;&gt;
+                        &lt;input type=&quot;hidden&quot; name=&quot;id&quot; class=&quot;form-control id2&quot; required&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;btn btn-success&quot;&gt;Delete&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;script src=&quot;/assets/js/jquery-3.6.0.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/js/bootstrap.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(document).ready(function () {
+            //tampilkan data ke modal untuk edit
+            $('#mytable').on('click', '.edit', function () {
+                var id = $(this).data('id');
+                var username = $(this).data('username');
+                var password = $(this).data('password');
+                $('#EditModal').modal('show');
+                $('.username').val(username);
+                $('.password').val(password);
+                $('.id').val(id);
+            });
+            //tampilkan modal hapus record
+            $('#mytable').on('click', '.delete', function () {
+                var id = $(this).data('id');
+                $('#DeleteModal').modal('show');
+                $('.id2').val(id);
+            });
+
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<ol start="9">
+<li>
+<p>Testing</p>
+<p>Uji coba dengan perintah berikut.</p>
+<pre><code>node index
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="question--answer">
+  Question &amp; Answer
+  <a class="anchor" href="#question--answer">#</a>
+</h2>
+<h3 id="npm-err-npm--depends-node-gyp">
+  NPM ERR: npm : Depends: node-gyp
+  <a class="anchor" href="#npm-err-npm--depends-node-gyp">#</a>
+</h3>
+<p>Install manual package node.js yang kurang</p>
+<pre><code>sudo apt-get install nodejs-dev node-gyp libssl1.0-dev
+</code></pre>
+<h2 id="referensi">
+  Referensi
+  <a class="anchor" href="#referensi">#</a>
+</h2>
+<p>ref: <a href="https://mfikri.com/artikel/crud-nodejs-mysql">https://mfikri.com/artikel/crud-nodejs-mysql</a></p>
+<p>ref: <a href="https://mfikri.com/artikel/tutorial-nodejs">https://mfikri.com/artikel/tutorial-nodejs</a></p>
+<p>ref: <a href="https://mfikri.com/artikel/tutorial-express-pemula">https://mfikri.com/artikel/tutorial-express-pemula</a></p>
+<p>ref: <a href="https://mfikri.com/artikel/express-mysql-vue">https://mfikri.com/artikel/express-mysql-vue</a></p>
+<p>ref: <a href="https://www.youtube.com/watch?v=es9_6RFR7wk">https://www.youtube.com/watch?v=es9_6RFR7wk</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pengantar-nodejs">Pengantar Node.JS</a>
+      <ul>
+        <li><a href="#nodejs-1">Node.JS</a></li>
+        <li><a href="#npm">NPM</a></li>
+        <li><a href="#express">Express</a></li>
+      </ul>
+    </li>
+    <li><a href="#perintah-command-line">Perintah Command Line</a>
+      <ul>
+        <li><a href="#install-nodejs">Install Node.JS</a></li>
+        <li><a href="#install-npm">Install NPM</a></li>
+        <li><a href="#initiate-nodejs-file-run-server-otomatis">Initiate node.js file (Run Server Otomatis)</a></li>
+      </ul>
+    </li>
+    <li><a href="#membuat-server-nodejs">Membuat Server Node.JS</a></li>
+    <li><a href="#nodejs-mysql">Node.JS MySql</a></li>
+    <li><a href="#crud-nodejs-express-bootstrap--mysql">CRUD Node.JS, Express, Bootstrap &amp; MySQL</a></li>
+    <li><a href="#question--answer">Question &amp; Answer</a>
+      <ul>
+        <li><a href="#npm-err-npm--depends-node-gyp">NPM ERR: npm : Depends: node-gyp</a></li>
+      </ul>
+    </li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
