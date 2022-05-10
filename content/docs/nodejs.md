@@ -41,7 +41,7 @@ Cek Versi
 
 Membuat package.json
 
-    npm init
+    npm init -y
 
 ### Install NPM
 
@@ -398,6 +398,59 @@ Jalankan di terminal dengan perintah 'node koneksi.js'
 
             node index
 
+## MVC
+
+1.  Tambahkan kode berikut pada file “package.json” (dibawah variabel "main"):
+
+        "type": "module",
+
+2.  Tambahkan folder route setara dengan folder node_modules.
+
+3.  Buat file route.js di dalam folder route. Ketikkan kode berikut.
+
+        //import express
+        const express = require('express');
+
+        // init express router
+        const router = express.Router();
+
+        // Home route
+        router.get('/', (req, res) => {
+            res.send('Welcome to Home Page');
+        });
+
+        // About route
+        router.get('/about', (req, res) => {
+            res.send('Welcome to About Page');
+        });
+
+        // Contact route
+        router.get('/contact', (req, res) => {
+            res.send('Welcome to Contact Page');
+        });
+
+        // export default router
+        module.exports = router;
+
+4.  Ketik pada index.js
+
+        //import express
+        const express = require('express');
+
+        // init express
+        const app = express();
+        const router = require('./routes/routes');
+        // const routeUser = require('./routes/user');
+
+        // Use Router
+        app.use('/', router);
+        // app.use('/user', routeUser);
+
+        // listen on port
+        app.listen(3000, () => console.log('Server Running at http://localhost:3000'));
+
+5.  Jalankan sesuai route yang dibuat.
+
 ## Question & Answer
 
 ### NPM ERR: npm : Depends: node-gyp
@@ -407,8 +460,6 @@ Install manual package node.js yang kurang
     sudo apt-get install nodejs-dev node-gyp libssl1.0-dev
 
 ## Referensi
-
-ref: https://mfikri.com/artikel/crud-nodejs-mysql
 
 ref: https://mfikri.com/artikel/tutorial-nodejs
 

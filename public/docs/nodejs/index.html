@@ -18,7 +18,7 @@ NPM#NPM adalah Node Package Manager. Digunakan untuk berbagi tool, menginstal
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e62c87c0a5f78618c1d9654bac000b57fdba292e359cd3ae3a97d4774328868d.css" integrity="sha256-5iyHwKX3hhjB2WVLrAALV/26KS41nNOuOpfUd0Moho0=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.68b7b269bbf297e29f38bbdcae319eb51c2f85681d37122358752af180f40b1e.js" integrity="sha256-aLeyabvyl&#43;KfOLvcrjGetRwvhWgdNxIjWHUq8YD0Cx4=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.249e5be05174f2599f94b8bee9a92ba24b3f72766bb5a865d48a7829bb703155.js" integrity="sha256-JJ5b4FF08lmflLi&#43;6akroks/cnZrtahl1Ip4KbtwMVU=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -210,6 +210,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#membuat-server-nodejs">Membuat Server Node.JS</a></li>
     <li><a href="#nodejs-mysql">Node.JS MySql</a></li>
     <li><a href="#crud-nodejs-express-bootstrap--mysql">CRUD Node.JS, Express, Bootstrap &amp; MySQL</a></li>
+    <li><a href="#mvc">MVC</a></li>
     <li><a href="#question--answer">Question &amp; Answer</a>
       <ul>
         <li><a href="#npm-err-npm--depends-node-gyp">NPM ERR: npm : Depends: node-gyp</a></li>
@@ -267,7 +268,7 @@ https://github.com/alex-shpak/hugo-book
 <pre><code>npm -v
 </code></pre>
 <p>Membuat package.json</p>
-<pre><code>npm init
+<pre><code>npm init -y
 </code></pre>
 <h3 id="install-npm">
   Install NPM
@@ -624,6 +625,68 @@ app.listen(8000, () =&gt; {
 </ol>
 </li>
 </ol>
+<h2 id="mvc">
+  MVC
+  <a class="anchor" href="#mvc">#</a>
+</h2>
+<ol>
+<li>
+<p>Tambahkan kode berikut pada file “package.json” (dibawah variabel &ldquo;main&rdquo;):</p>
+<pre><code>&quot;type&quot;: &quot;module&quot;,
+</code></pre>
+</li>
+<li>
+<p>Tambahkan folder route setara dengan folder node_modules.</p>
+</li>
+<li>
+<p>Buat file route.js di dalam folder route. Ketikkan kode berikut.</p>
+<pre><code>//import express
+const express = require('express');
+
+// init express router
+const router = express.Router();
+
+// Home route
+router.get('/', (req, res) =&gt; {
+    res.send('Welcome to Home Page');
+});
+
+// About route
+router.get('/about', (req, res) =&gt; {
+    res.send('Welcome to About Page');
+});
+
+// Contact route
+router.get('/contact', (req, res) =&gt; {
+    res.send('Welcome to Contact Page');
+});
+
+// export default router
+module.exports = router;
+</code></pre>
+</li>
+<li>
+<p>Ketik pada index.js</p>
+<pre><code>//import express
+const express = require('express');
+
+// init express
+const app = express();
+const router = require('./routes/routes');
+// const routeUser = require('./routes/user');
+
+// Use Router
+app.use('/', router);
+// app.use('/user', routeUser);
+
+// listen on port
+app.listen(3000, () =&gt; console.log('Server Running at http://localhost:3000'));
+</code></pre>
+</li>
+<li>
+<p>Jalankan sesuai route yang dibuat.</p>
+</li>
+</ol>
 <h2 id="question--answer">
   Question &amp; Answer
   <a class="anchor" href="#question--answer">#</a>
@@ -639,7 +702,6 @@ app.listen(8000, () =&gt; {
   Referensi
   <a class="anchor" href="#referensi">#</a>
 </h2>
-<p>ref: <a href="https://mfikri.com/artikel/crud-nodejs-mysql">https://mfikri.com/artikel/crud-nodejs-mysql</a></p>
 <p>ref: <a href="https://mfikri.com/artikel/tutorial-nodejs">https://mfikri.com/artikel/tutorial-nodejs</a></p>
 <p>ref: <a href="https://mfikri.com/artikel/tutorial-express-pemula">https://mfikri.com/artikel/tutorial-express-pemula</a></p>
 <p>ref: <a href="https://mfikri.com/artikel/express-mysql-vue">https://mfikri.com/artikel/express-mysql-vue</a></p>
@@ -703,6 +765,7 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
     <li><a href="#membuat-server-nodejs">Membuat Server Node.JS</a></li>
     <li><a href="#nodejs-mysql">Node.JS MySql</a></li>
     <li><a href="#crud-nodejs-express-bootstrap--mysql">CRUD Node.JS, Express, Bootstrap &amp; MySQL</a></li>
+    <li><a href="#mvc">MVC</a></li>
     <li><a href="#question--answer">Question &amp; Answer</a>
       <ul>
         <li><a href="#npm-err-npm--depends-node-gyp">NPM ERR: npm : Depends: node-gyp</a></li>
