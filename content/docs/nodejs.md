@@ -451,6 +451,36 @@ Jalankan di terminal dengan perintah 'node koneksi.js'
 
 5.  Jalankan sesuai route yang dibuat.
 
+## Full Stack Express, Vue, MySQL, MVC
+
+### Backend
+
+1.  Buat folder "backend". Kemudian jalankan npm init -y di terminal untuk membuat package.json.
+2.  Selanjutnya, install express, mysql2, dan cors dengan mengetikan perintah berikut.
+
+        npm install express mysql2 cors
+
+3.  Tambahkan kode berikut pada file “package.json” (dibawah baris "main").
+
+        "type": "module",
+
+4.  Terapkan MVC. Buat folder “config”, “controllers”, “models”, dan “routes” di dalam folder “backend”.
+
+5.  Buat file “database.js” di dalam folder “config”, buat file “user.js” di dalam folder “controllers”, buat file “userModel.js” di dalam folder “models”, buat file “routes.js” di dalam folder “routes”, dan buat file “index.js” di dalam folder “backend”.
+
+### Frontend
+
+1.  Tambahkan kode berikut pada file “package.json” (dibawah variabel "main"):
+
+        "type": "module",
+
+## HBS (Handlebars)
+
+1. npm init -y
+2. npm install express express-handlebars nodemon body-parser --save
+3. buat folder public & views setara node_modules, buat folder layouts & partials
+4. buat index.hbs di dalam folder layouts, main.hbs di dalam folder views, index.js setara dengan node_modules
+
 ## Question & Answer
 
 ### NPM ERR: npm : Depends: node-gyp
@@ -459,11 +489,13 @@ Install manual package node.js yang kurang
 
     sudo apt-get install nodejs-dev node-gyp libssl1.0-dev
 
+### Format Date Time
+
+Format date time default pada nodejs "Tue Oct 12 2021 00:00:00 GMT+0700 (WIB)". tambahkan package momentjs untuk Parse, validate, manipulate, dan display dates and times di JavaScript.
+
+    npm install moment
+
 ## Referensi
-
-ref: https://mfikri.com/artikel/tutorial-nodejs
-
-ref: https://mfikri.com/artikel/tutorial-express-pemula
 
 ref: https://mfikri.com/artikel/express-mysql-vue
 
