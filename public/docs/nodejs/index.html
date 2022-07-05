@@ -18,7 +18,7 @@ NPM#NPM adalah Node Package Manager. Digunakan untuk berbagi tool, menginstal
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.e62c87c0a5f78618c1d9654bac000b57fdba292e359cd3ae3a97d4774328868d.css" integrity="sha256-5iyHwKX3hhjB2WVLrAALV/26KS41nNOuOpfUd0Moho0=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.249e5be05174f2599f94b8bee9a92ba24b3f72766bb5a865d48a7829bb703155.js" integrity="sha256-JJ5b4FF08lmflLi&#43;6akroks/cnZrtahl1Ip4KbtwMVU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.47be07c5865e857e3382b7777e072ab93a7b1affb6f98893293de08305e8a8a0.js" integrity="sha256-R74HxYZehX4zgrd3fgcquTp7Gv&#43;2&#43;YiTKT3ggwXoqKA=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -211,9 +211,17 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#nodejs-mysql">Node.JS MySql</a></li>
     <li><a href="#crud-nodejs-express-bootstrap--mysql">CRUD Node.JS, Express, Bootstrap &amp; MySQL</a></li>
     <li><a href="#mvc">MVC</a></li>
+    <li><a href="#full-stack-express-vue-mysql-mvc">Full Stack Express, Vue, MySQL, MVC</a>
+      <ul>
+        <li><a href="#backend">Backend</a></li>
+        <li><a href="#frontend">Frontend</a></li>
+      </ul>
+    </li>
+    <li><a href="#hbs-handlebars">HBS (Handlebars)</a></li>
     <li><a href="#question--answer">Question &amp; Answer</a>
       <ul>
         <li><a href="#npm-err-npm--depends-node-gyp">NPM ERR: npm : Depends: node-gyp</a></li>
+        <li><a href="#format-date-time">Format Date Time</a></li>
       </ul>
     </li>
     <li><a href="#referensi">Referensi</a></li>
@@ -687,6 +695,56 @@ app.listen(3000, () =&gt; console.log('Server Running at http://localhost:3000')
 <p>Jalankan sesuai route yang dibuat.</p>
 </li>
 </ol>
+<h2 id="full-stack-express-vue-mysql-mvc">
+  Full Stack Express, Vue, MySQL, MVC
+  <a class="anchor" href="#full-stack-express-vue-mysql-mvc">#</a>
+</h2>
+<h3 id="backend">
+  Backend
+  <a class="anchor" href="#backend">#</a>
+</h3>
+<ol>
+<li>
+<p>Buat folder &ldquo;backend&rdquo;. Kemudian jalankan npm init -y di terminal untuk membuat package.json.</p>
+</li>
+<li>
+<p>Selanjutnya, install express, mysql2, dan cors dengan mengetikan perintah berikut.</p>
+<pre><code>npm install express mysql2 cors
+</code></pre>
+</li>
+<li>
+<p>Tambahkan kode berikut pada file “package.json” (dibawah baris &ldquo;main&rdquo;).</p>
+<pre><code>&quot;type&quot;: &quot;module&quot;,
+</code></pre>
+</li>
+<li>
+<p>Terapkan MVC. Buat folder “config”, “controllers”, “models”, dan “routes” di dalam folder “backend”.</p>
+</li>
+<li>
+<p>Buat file “database.js” di dalam folder “config”, buat file “user.js” di dalam folder “controllers”, buat file “userModel.js” di dalam folder “models”, buat file “routes.js” di dalam folder “routes”, dan buat file “index.js” di dalam folder “backend”.</p>
+</li>
+</ol>
+<h3 id="frontend">
+  Frontend
+  <a class="anchor" href="#frontend">#</a>
+</h3>
+<ol>
+<li>
+<p>Tambahkan kode berikut pada file “package.json” (dibawah variabel &ldquo;main&rdquo;):</p>
+<pre><code>&quot;type&quot;: &quot;module&quot;,
+</code></pre>
+</li>
+</ol>
+<h2 id="hbs-handlebars">
+  HBS (Handlebars)
+  <a class="anchor" href="#hbs-handlebars">#</a>
+</h2>
+<ol>
+<li>npm init -y</li>
+<li>npm install express express-handlebars nodemon body-parser &ndash;save</li>
+<li>buat folder public &amp; views setara node_modules, buat folder layouts &amp; partials</li>
+<li>buat index.hbs di dalam folder layouts, main.hbs di dalam folder views, index.js setara dengan node_modules</li>
+</ol>
 <h2 id="question--answer">
   Question &amp; Answer
   <a class="anchor" href="#question--answer">#</a>
@@ -698,12 +756,17 @@ app.listen(3000, () =&gt; console.log('Server Running at http://localhost:3000')
 <p>Install manual package node.js yang kurang</p>
 <pre><code>sudo apt-get install nodejs-dev node-gyp libssl1.0-dev
 </code></pre>
+<h3 id="format-date-time">
+  Format Date Time
+  <a class="anchor" href="#format-date-time">#</a>
+</h3>
+<p>Format date time default pada nodejs &ldquo;Tue Oct 12 2021 00:00:00 GMT+0700 (WIB)&rdquo;. tambahkan package momentjs untuk Parse, validate, manipulate, dan display dates and times di JavaScript.</p>
+<pre><code>npm install moment
+</code></pre>
 <h2 id="referensi">
   Referensi
   <a class="anchor" href="#referensi">#</a>
 </h2>
-<p>ref: <a href="https://mfikri.com/artikel/tutorial-nodejs">https://mfikri.com/artikel/tutorial-nodejs</a></p>
-<p>ref: <a href="https://mfikri.com/artikel/tutorial-express-pemula">https://mfikri.com/artikel/tutorial-express-pemula</a></p>
 <p>ref: <a href="https://mfikri.com/artikel/express-mysql-vue">https://mfikri.com/artikel/express-mysql-vue</a></p>
 <p>ref: <a href="https://www.youtube.com/watch?v=es9_6RFR7wk">https://www.youtube.com/watch?v=es9_6RFR7wk</a></p>
 </article>
@@ -766,9 +829,17 @@ document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("clic
     <li><a href="#nodejs-mysql">Node.JS MySql</a></li>
     <li><a href="#crud-nodejs-express-bootstrap--mysql">CRUD Node.JS, Express, Bootstrap &amp; MySQL</a></li>
     <li><a href="#mvc">MVC</a></li>
+    <li><a href="#full-stack-express-vue-mysql-mvc">Full Stack Express, Vue, MySQL, MVC</a>
+      <ul>
+        <li><a href="#backend">Backend</a></li>
+        <li><a href="#frontend">Frontend</a></li>
+      </ul>
+    </li>
+    <li><a href="#hbs-handlebars">HBS (Handlebars)</a></li>
     <li><a href="#question--answer">Question &amp; Answer</a>
       <ul>
         <li><a href="#npm-err-npm--depends-node-gyp">NPM ERR: npm : Depends: node-gyp</a></li>
+        <li><a href="#format-date-time">Format Date Time</a></li>
       </ul>
     </li>
     <li><a href="#referensi">Referensi</a></li>
